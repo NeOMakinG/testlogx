@@ -1,13 +1,13 @@
 import dynamic from 'next/dynamic'
 
-export const Bridge = () => {
+export const Page = () => {
 	const CedeSend = dynamic(() => import('@cedelabs/widgets').then((mod) => mod.CedeSend), { ssr: false })
 
 	return (
 		<div>
-			{CedeSend && <CedeSend />}
+			<CedeSend />
 		</div>
 	)
 }
 
-export default Bridge
+export default Page
