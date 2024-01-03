@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
 
-export const Page = () => {
+export default function Page() {
 	const CedeSend = dynamic(() => import('@cedelabs/widgets').then((mod) => mod.CedeSend), { ssr: false })
 
 	return (
@@ -9,5 +9,3 @@ export const Page = () => {
 		</div>
 	)
 }
-
-export default Page
